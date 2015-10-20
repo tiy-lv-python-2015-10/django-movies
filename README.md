@@ -2,7 +2,7 @@
 
 ## Description
 
-This will be a multi part assignment to get a understanding of django with the 
+Django movies is an assignment to get an understanding of django with the 
 [Movielens](http://grouplens.org/datasets/movielens/) dataset.
 
 ## Learning Objectives
