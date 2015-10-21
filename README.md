@@ -42,4 +42,6 @@ Export the data from the postgres database using 0xDBE and import it into the
 new system.
 
 Using the django shell create User objects to represent the user ids in the 
-ratings table. 
+ratings table. `python manage.py shell`
+
+
