@@ -3,20 +3,20 @@ from moviekiller.models import Movie, Rating, Tag, Genre, Link
 
 @admin.register(Movie)
 class MovieAdmin(admin.ModelAdmin):
-    fields = ['title', 'genres']
+    list_display = ['title', 'genres']
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    fields = ['userid', 'movieid', 'rating', 'timestamp']
+    list_display = ['user_id', 'movie_id', 'rating', 'timestamp']
 
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
-    fields = ['userid', 'movieid', 'tag', 'timestamp']
+    list_display = ['user_id', 'movie_id', 'tag', 'timestamp']
 
 @admin.register(Link)
 class LinkAdmin(admin.ModelAdmin):
-    fields = ['movieid', 'imdbid', 'tmdbid']
+    list_display = ['movie_id', 'imdb_id', 'tmdb_id']
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
-    fields = ['genre', 'id']
+    list_display = ['genre', 'id']
