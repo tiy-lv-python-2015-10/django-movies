@@ -1,6 +1,4 @@
 from django.db import models
-from django.forms import IntegerField, FloatField
-
 
 class Movies(models.Model):
     title = models.CharField(max_length=255)
@@ -10,26 +8,26 @@ class Movies(models.Model):
 
 
 class Links(models.Model):
-    imdbid = IntegerField
-    tmdbid = IntegerField
+    imdbid = models.IntegerField(default=0)
+    tmdbid = models.IntegerField(default=0)
     date_added = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
 
 class Ratings(models.Model):
-    userid = IntegerField
+    userid = models.IntegerField(default=0)
     movieid = models.ForeignKey(Movies)
-    rating = FloatField
-    timestamp = IntegerField
+    rating = models.FloatField(default=0)
+    timestamp = models.IntegerField(default=0)
     date_added = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
 
 class Tags(models.Model):
-    userid = IntegerField
+    userid = models.IntegerField(default=0)
     movieid = models.ForeignKey(Movies)
     tag = models.CharField(max_length=255)
-    timestamp = IntegerField
+    timestamp = models.IntegerField(default=0)
     date_added = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
