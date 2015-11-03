@@ -9,8 +9,7 @@ class LinksAdmin(admin.ModelAdmin):
 
 @admin.register(Genres)
 class GenresAdmin(admin.ModelAdmin):
-    list_display = ('genres', 'genreid',
-                    'add_date', 'modified_date')
+    list_display = ('genres', 'genreid')
 
 @admin.register(Movies)
 class MoviesAdmin(admin.ModelAdmin):

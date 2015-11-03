@@ -16,12 +16,10 @@ class Links(models.Model):
 class Genres(models.Model):
     genres = models.CharField(max_length=50)
     genreid = models.IntegerField(primary_key=True)
-    add_date = models.DateTimeField(auto_now_add=True)
-    modified_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return "Genres: {}, Genreid: {}, Add_date: {}, Modified_date: {}".format(
-            self.genres, self.genreid, self.add_date, self.modified_date)
+        return "Genres: {}, Genreid: {}".format(
+            self.genres, self.genreid)
 
 
 class Movies(models.Model):
